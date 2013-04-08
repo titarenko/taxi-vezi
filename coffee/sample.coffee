@@ -1,7 +1,9 @@
 class Car
-    constructor: () ->
+    constructor: (@x, @y) ->
+        @height
 
-    move: () =>
+    move: (focus) =>
+
 
     poke: () =>
 
@@ -17,15 +19,13 @@ class Fader
     getValue: () =>
 
 $ =>
-    
     paper = Raphael(100, 50, 1000, 600);
+    # rect(x, y, width, height, [r] - border-radius)
     rect = paper.rect(100, 100, 200, 100, 10);
     rect.attr("fill", "#f00");
-    rect.attr("stroke", "#fff");
 
     setTimeout(()=>
-            #rect.rotate(30)
-            rect.animate([{x: 100, y: 100, transform: "", "stroke": "#fff", opacity: 1}, {x: 100, y: 50, transform: "r-30", opacity: 1}], 100)
+            rect.animate([{ transform: ""}, {transform : "r-30t100,0"},{transform : "r0t175,0"}, {transform : "r30t250,0"}], 800)
             true
         , 2000)
     true
