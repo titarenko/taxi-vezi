@@ -32,16 +32,16 @@ class Car
         @driver = new Driver()
 
     move: =>
-        moveCar()
+        moveCar(@car)
         true
 
-    moveCar =->
-        focus = @driver.getFocus()
-        
+    moveCar=(car)->
+        #focus = @driver.getFocus()
 
-        @car.animate([{ transform: ""}, {transform : "r-30t100,0"}, {transform : "r0t175,0"}, {transform : "r15t250,0"}], 800)
+        car.animate([{ transform: ""}, {transform : "r-30t100,0"}, {transform : "r0t175,0"}, {transform : "r15t250,0"}], 800)
+        true
 
-    getDriver = ->
+    getDriver: =>
         @driver
 
     getAngle: =>
@@ -67,9 +67,9 @@ $ =>
     car = new Car(paper, 100, 100)
 
     setTimeout(()=>
-            #car.move()
-            value = new Interpolator({start : 1, end : 40, duration : 60}).getValue()
-            car.getDriver().poke()
-            console.log(value)
+            car.move()
+            #value = new Interpolator({start : 1, end : 40, duration : 60}).getValue()
+            #car.getDriver().poke()
+            #console.log(value)
         , 1000)
     true

@@ -1,0 +1,26 @@
+.transform(@angle, @x, @y) {
+	// transform:rotate(@angle);
+	// -ms-transform:rotate(@angle); /* IE 9 */
+	// -moz-transform:rotate(@angle); /* Firefox */
+	-webkit-transform: translate(@x, @y) rotate(@angle); /* Safari and Chrome */
+	-webkit-transform-origin: 50% 50%;
+	// -o-transform:rotate(@angle); /* Opera */
+}
+
+#car {
+	width: 300px;
+	height: 100px;
+	background: #efe;
+	// .transform(45deg, 500px, 200px);
+	-webkit-animation: movement 5s linear;
+	-webkit-animation-fill-mode: forwards;
+
+	@-webkit-keyframes movement{
+		0% {
+			.transform(0deg, 100px, 100px);
+		}
+		100% {
+			.transform(45deg, 500px, 100px);
+		}
+	}
+}
