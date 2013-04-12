@@ -6,7 +6,26 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
-  "author": "",
-  "license": "BSD"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/titarenko/taxi-vezi.git"
+  },
+  "author": "Constantin Titarenko",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "4b669e7ce82ad70702feb05d7ca8634774a40b40",
+  "dependencies": {
+    "async": "~0.2.6",
+    "iced-coffee-script": "~1.4.0c",
+    "express": "~3.1.1",
+    "express-resource": "~1.0.0",
+    "mongoose": "~3.6.4",
+    "winston": "~0.6.2",
+    "jade": "~0.28.2",
+    "less": "~1.3.3"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "game"
+  ]
 }
